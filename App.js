@@ -12,25 +12,3 @@ export default function App() {
   );
 }
 
-export default function AppLayout() {
-  return (
-    <Tabs>
-      <Tabs.Screen
-        name="index"
-        options={{
-          // Essa guia não aparecerá na barra de guias.
-          href: null,
-        }}
-      />
-      <Tabs.Screen
-        name="[user]"
-        options={{
-          // Garanta que a guia sempre aponte para o mesmo href.
-          href: '/evanbacon',
-          // OU você pode usar o objeto Href:
-          // href: { pathname: '/[user]', params: { user: 'evanbacon' } },
-        }}
-      />
-    </Tabs>
-  );
-}
