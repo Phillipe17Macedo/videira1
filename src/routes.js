@@ -6,7 +6,7 @@ import Events from './pages/Events'
 import More from './pages/More'
 
 import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();

@@ -1,15 +1,17 @@
-import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity} from 'react-native';
-
+import React from 'react';
+import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Pressable} from 'react-native';
 import RadicaisLivres from "../../assets/img/RL/img-teste.png";
+import LogoVideira from "../../assets/img/logoVide.png";
+import Header from '../Header';
+import { Ionicons } from '@expo/vector-icons';
 
 const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
+      <Header/>
       <ScrollView>
-
-
         <View style={styles.content}>
           <TouchableOpacity style={styles.eventoImageHome}>
             <Image source={RadicaisLivres} style={styles.eventoImage}/>
@@ -76,11 +78,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom:40,
   },
-  textoImg:{
-    marginTop:10,
+  logoVideiraHeader:{
+    backgroundColor: '#3E4A59',
+    width: '100%',
+    height: 60,
     alignItems: 'center',
-    fontSize: 20,
-    color:'#fff',
-    fontStyle: 'italic',
-  }
+    justifyContent: 'center',
+    paddingRight: '65%',
+    paddingTop: 3,
+    borderEndEndRadius: 10,
+    borderEndStartRadius: 10,
+  },
 });
