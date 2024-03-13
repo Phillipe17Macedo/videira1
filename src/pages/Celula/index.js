@@ -2,40 +2,26 @@ import { StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform} 
 
 const statusBarHeight = StatusBar.currentHeight;
 
-export default function Home() {
+export default function Celula() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView  style={styles.container}>
       <ScrollView>
         <View style={styles.content}>
-          <Text>ENCONTRO COM DEUS</Text>
+          <Text>Célula Adonai</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>IMERSÃO</Text>
-        </View>
-
-        <View style={styles.content}>
-          <Text>RADICAIS LIVRES</Text>
-        </View>
-
-        <View style={styles.content}>
-          <Text>RADICAIS KIDS</Text>
-        </View>
-
-        <View style={styles.content}>
-          <Text>CÉLULAS</Text>
+          <Text>Célula Revived</Text>
         </View>
         
         <View style={styles.content}>
-          <Text>CULTOS</Text>
+          <Text>Célula Tetelestai</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>CONTRIBUIR</Text>
+          <Text>Célula El Shadai</Text>
         </View>
-        
       </ScrollView>
-
     </SafeAreaView>
   );
 }
@@ -52,9 +38,9 @@ const styles = StyleSheet.create({
     width: '85%',
     height: 120,
     marginBottom: 25,
-    backgroundColor: '#3E4A59',
+    backgroundColor: '#f1f1f1',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-  }
+  },
 });
