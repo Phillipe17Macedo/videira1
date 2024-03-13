@@ -7,31 +7,31 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>ENCONTRO COM DEUS</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>IMERSÃO</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>RADICAIS LIVRES</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>RADICAIS KIDS</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>CÉLULAS</Text>
         </View>
         
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>CULTOS</Text>
         </View>
 
         <View style={styles.content}>
-          <Text>Conteúdo</Text>
+          <Text>CONTRIBUIR</Text>
         </View>
         
       </ScrollView>
