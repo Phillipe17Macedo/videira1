@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform} from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity} from 'react-native';
+
+import RadicaisLivres from "../../assets/img/RL/img-teste.png";
 
 const statusBarHeight = StatusBar.currentHeight;
 
@@ -6,32 +8,43 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+
+
         <View style={styles.content}>
-          <Text>ENCONTRO COM DEUS</Text>
+          <TouchableOpacity style={styles.eventoImageHome}>
+            <Image source={RadicaisLivres} style={styles.eventoImage}/>
+            <Text style={styles.textoImg}>ENCONTRO COM DEUS</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.content}>
-          <Text>IMERSÃO</Text>
+          <TouchableOpacity>
+            <Text>IMERSÃO</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.content}>
-          <Text>RADICAIS LIVRES</Text>
+          <TouchableOpacity>
+            <Text>RADICAIS LIVRES</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.content}>
-          <Text>RADICAIS KIDS</Text>
+          <TouchableOpacity>
+            <Text>RADICAIS KIDS</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.content}>
-          <Text>CÉLULAS</Text>
+          <TouchableOpacity>
+            <Text>CÉLULAS</Text>
+          </TouchableOpacity>
         </View>
         
         <View style={styles.content}>
-          <Text>CULTOS</Text>
-        </View>
-
-        <View style={styles.content}>
-          <Text>CONTRIBUIR</Text>
+          <TouchableOpacity>
+            <Text>CULTOS</Text>
+          </TouchableOpacity>
         </View>
         
       </ScrollView>
@@ -50,11 +63,24 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flex:1,
     width: '85%',
-    height: 120,
-    marginBottom: 25,
+    height: 330,
+    marginTop: 15,
+    marginBottom: 20,
     backgroundColor: '#3E4A59',
-    alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
+  },
+  eventoImageHome:{
+    width: '100%',
+    alignItems: 'center',
+    borderRadius: 10,
+    marginBottom:40,
+  },
+  textoImg:{
+    marginTop:10,
+    alignItems: 'center',
+    fontSize: 20,
+    color:'#fff',
+    fontStyle: 'italic',
   }
 });
