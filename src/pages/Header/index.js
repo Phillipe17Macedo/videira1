@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 15,
+    height: 70,
   },
   logoVideiraHeader:{
     backgroundColor: '#3E4A59',
@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
   iconPersonHeader:{
     position: 'absolute',
     alignItems:'flex-end',
+    justifyContent: 'center',
     marginLeft: '85%',
-    paddingRight: 15,
+    right: 20,
   },
 });
