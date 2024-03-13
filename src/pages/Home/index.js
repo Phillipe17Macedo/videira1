@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Pressable} from 'react-native';
 import RadicaisLivres from "../../assets/img/RL/img-teste.png";
-import LogoVideira from "../../assets/img/logoVide.png";
 import Header from '../Header';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -77,16 +76,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     marginBottom:40,
-  },
-  logoVideiraHeader:{
-    backgroundColor: '#3E4A59',
-    width: '100%',
-    height: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingRight: '65%',
-    paddingTop: 3,
-    borderEndEndRadius: 10,
-    borderEndStartRadius: 10,
   },
 });
