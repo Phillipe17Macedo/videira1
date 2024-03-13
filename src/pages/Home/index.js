@@ -1,53 +1,80 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Pressable} from 'react-native';
-import RadicaisLivres from "../../assets/img/RL/img-teste.png";
-import Header from '../Header';
-import { Ionicons } from '@expo/vector-icons';
+import Events from '../Events';
+import { useNavigation } from '@react-navigation/native';
 
 const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home() {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.container}>
-      <Header/>
       <ScrollView>
         <View style={styles.content}>
-          <TouchableOpacity style={styles.eventoImageHome}>
-            <Image source={RadicaisLivres} style={styles.eventoImage}/>
-            <Text style={styles.textoImg}>ENCONTRO COM DEUS</Text>
-          </TouchableOpacity>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/imersao.png')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>IMERSÃO MARCADOS PELO ESPIRÍTO</Text>
+               <Text style={styles.textTwo}>Data: 16 e 17 de Março</Text>
+               <Text style={styles.textThree}>Valor: R$25,00</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.content}>
-          <TouchableOpacity>
-            <Text>IMERSÃO</Text>
-          </TouchableOpacity>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>ENCONTRO COM DEUS</Text>
+               <Text style={styles.textTwo}>Data: 26 à 28 de Abril</Text>
+               <Text style={styles.textThree}>Valor: R$50,00</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.content}>
-          <TouchableOpacity>
-            <Text>RADICAIS LIVRES</Text>
-          </TouchableOpacity>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>REUNIÃO RADICAIS LIVRES</Text>
+               <Text style={styles.textTwo}>Data: 16 de Março</Text>
+               <Text style={styles.textThree}>Valor: Grátis</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.content}>
-          <TouchableOpacity>
-            <Text>RADICAIS KIDS</Text>
-          </TouchableOpacity>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/RK/encontro-kids.png')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>CULTO RADICAIS KIDS</Text>
+               <Text style={styles.textTwo}>Data: 17 de Março</Text>
+               <Text style={styles.textThree}>Valor: Grátis</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <View style={styles.content}>
-          <TouchableOpacity>
-            <Text>CÉLULAS</Text>
-          </TouchableOpacity>
+        <View style={[styles.content, {marginBottom: 90}]}>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Celula')}>
+              <Image source={require('../../assets/img/RL/Jesus.jpeg')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>CÉLULAS</Text>
+               <Text style={styles.textTwo}>Todas as Informações - Horários e Endereços</Text>
+               <Text style={styles.textThree}>Valor: Grátis</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-        
-        <View style={styles.content}>
-          <TouchableOpacity>
-            <Text>CULTOS</Text>
-          </TouchableOpacity>
-        </View>
-        
       </ScrollView>
 
     </SafeAreaView>
@@ -61,20 +88,57 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
   },
   content:{
+    alignItems: 'center',
     alignSelf: 'center',
+    justifyContent: 'center',
     flex:1,
     width: '85%',
-    height: 330,
-    marginTop: 15,
+    height: 200,
     marginBottom: 20,
-    backgroundColor: '#3E4A59',
-    justifyContent: 'center',
+    backgroundColor: '#f1f1f1',
     borderRadius: 10,
+    overflow: 'hidden',
   },
-  eventoImageHome:{
+  containerEventos:{
+    position: 'relative',
     width: '100%',
-    alignItems: 'center',
-    borderRadius: 10,
-    marginBottom:40,
+    height: '65.08%',
+    textAlign: 'center',
+    bottom: 35,
   },
+  images:{
+    width: '100%',
+    height: '100%',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  textContainer:{
+    position: 'absolute',
+    top: 130,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 70,
+    backgroundColor: '#3E4A59',
+    paddingTop: 6,
+    paddingLeft: 10,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+  },
+  textOne:{
+    color: '#fff',
+    textAlign: 'left',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  textTwo:{
+    color: '#fff',
+    textAlign: 'left',
+    fontSize: 14,
+  },
+  textThree:{
+    color: '#fff',
+    textAlign: 'left',
+    fontSize: 14,
+  }  
 });
