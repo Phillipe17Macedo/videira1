@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Pressable} from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity} from 'react-native';
 import Events from '../Events';
 import { useNavigation } from '@react-navigation/native';
 
@@ -44,7 +44,7 @@ export default function Home() {
               <View style={styles.textContainer}>
                <Text style={styles.textOne}>REUNIÃO RADICAIS LIVRES</Text>
                <Text style={styles.textTwo}>Data: 16 de Março</Text>
-               <Text style={styles.textThree}>Valor: Grátis</Text>
+               <Text style={styles.textThree}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -56,8 +56,8 @@ export default function Home() {
               <Image source={require('../../assets/img/RK/encontro-kids.png')} style={styles.images}/>
               <View style={styles.textContainer}>
                <Text style={styles.textOne}>CULTO RADICAIS KIDS</Text>
-               <Text style={styles.textTwo}>Data: 17 de Março</Text>
-               <Text style={styles.textThree}>Valor: Grátis</Text>
+               <Text style={styles.textTwo}>Data: Aos Domingos</Text>
+               <Text style={styles.textThree}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -140,5 +140,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'left',
     fontSize: 14,
-  }  
+  },  
 });
