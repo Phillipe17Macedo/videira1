@@ -1,14 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-import { Tabs } from 'expo-router/tabs'
+import Routes from  './src/routes';
+import Header from './src/pages/Header';
+import { NavigationContainer } from '@react-navigation/native'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text> Hello World! Reacr Expo</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Header/>
+      <Routes/>
+    </NavigationContainer>
+    
   );
 }
 
