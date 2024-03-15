@@ -26,7 +26,9 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#040316',
-    paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
+    paddingTop: Platform.OS === 'android' ? statusBarHeight : 30,
+    paddingBottom: Platform.OS ==='android' ? statusBarHeight: 0,
+    paddingBottom: Platform.OS ===  'ios' ? statusBarHeight: 0,
   },
   containerHeader: {
     flexDirection: 'row',

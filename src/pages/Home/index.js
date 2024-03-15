@@ -11,6 +11,11 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+
+        <View style={[styles.category, {marginTop: 20}]}>
+          <Text style={styles.textCategory}>- Esta Semana:</Text>
+        </View>
+
         <View style={styles.content}>
           <View style={styles.containerEventos}>
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
@@ -24,26 +29,17 @@ export default function Home() {
           </View>
         </View>
 
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={styles.textOne}>ENCONTRO COM DEUS</Text>
-               <Text style={styles.textTwo}>Data: 26 à 28 de Abril</Text>
-               <Text style={styles.textThree}>Valor: R$50,00</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
+        <View style={styles.category}>
+          <Text style={styles.textCategory}>- Eventos Final de Semana</Text>
         </View>
 
         <View style={styles.content}>
           <View style={styles.containerEventos}>
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
+              <Image source={require('../../assets/img/cultoIgreja.png')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>REUNIÃO RADICAIS LIVRES</Text>
-               <Text style={styles.textTwo}>Data: 16 de Março</Text>
+               <Text style={styles.textOne}>CULTO DA FAMÍLIA</Text>
+               <Text style={styles.textTwo}>Data: Aos Domingos</Text>
                <Text style={styles.textThree}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
@@ -63,7 +59,7 @@ export default function Home() {
           </View>
         </View>
 
-        <View style={[styles.content, {marginBottom: 90}]}>
+        <View style={styles.content}>
           <View style={styles.containerEventos}>
             <TouchableOpacity onPress={() => navigation.navigate('Celula')}>
               <Image source={require('../../assets/img/RL/Jesus.jpeg')} style={styles.images}/>
@@ -75,8 +71,37 @@ export default function Home() {
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
 
+        <View style={styles.content}>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>REUNIÃO RADICAIS LIVRES</Text>
+               <Text style={styles.textTwo}>Data: 16 de Março</Text>
+               <Text style={styles.textThree}>Horário: 18:00</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.category}>
+          <Text style={styles.textCategory}>- Próximo Mês</Text>
+        </View>
+
+        <View style={[styles.content, {marginBottom: 100}]}>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+              <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
+              <View style={styles.textContainer}>
+               <Text style={styles.textOne}>ENCONTRO COM DEUS</Text>
+               <Text style={styles.textTwo}>Data: 26 à 28 de Abril</Text>
+               <Text style={styles.textThree}>Valor: R$50,00</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -85,7 +110,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#040316',
-    paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
   },
   content:{
     alignItems: 'center',
@@ -140,5 +164,16 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'left',
     fontSize: 14,
-  },  
+  }, 
+  category:{
+    marginBottom: 20,
+    width: '85%',
+    height: 'auto',
+    alignSelf: 'center',
+  },
+  textCategory:{
+    color:'#fff',
+    fontWeight: 'bold',
+    fontSize: 21,
+  }
 });
