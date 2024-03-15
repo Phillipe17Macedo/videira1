@@ -8,6 +8,7 @@ import More from './pages/More'
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome6 } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -55,9 +56,9 @@ function Routes(){
                     headerShown: false,
                     tabBarIcon: ({color, size,focused}) =>{
                         if(focused){
-                            return <MaterialIcons name="connect-without-contact" size={size} color={color}/>
+                            return <FontAwesome6 name="people-roof" size={size} color={color}/>
                         }
-                        return <MaterialIcons name="connect-without-contact" size={size} color={color} />;
+                        return <FontAwesome6 name="people-roof" size={size} color={color} />;
                     }
                 }}
             />

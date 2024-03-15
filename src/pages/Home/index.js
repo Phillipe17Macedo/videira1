@@ -13,7 +13,7 @@ export default function Home() {
       <ScrollView>
 
         <View style={[styles.category, {marginTop: 20}]}>
-          <Text style={styles.textCategory}>- Esta Semana:</Text>
+          <Text style={styles.textCategory}>Esta Semana</Text>
         </View>
 
         <View style={styles.content}>
@@ -30,7 +30,7 @@ export default function Home() {
         </View>
 
         <View style={styles.category}>
-          <Text style={styles.textCategory}>- Eventos Final de Semana</Text>
+          <Text style={styles.textCategory}>Eventos Final de Semana</Text>
         </View>
 
         <View style={styles.content}>
@@ -86,7 +86,7 @@ export default function Home() {
         </View>
 
         <View style={styles.category}>
-          <Text style={styles.textCategory}>- Próximo Mês</Text>
+          <Text style={styles.textCategory}>Próximo Mês</Text>
         </View>
 
         <View style={[styles.content, {marginBottom: 100}]}>
