@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Linking } from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity, Linking, useWindowDimensions } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -6,6 +6,9 @@ const statusBarHeight = StatusBar.currentHeight;
 
 export default function Celula() {
   const navigation = useNavigation();
+  const windowWidth = useWindowDimensions().width;
+  const windowHeight = useWindowDimensions().height;
+
 
   const openGoogleMaps = (lat, lng) => {
     const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
@@ -15,26 +18,28 @@ export default function Celula() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <View style={styles.content}>
+
+        <View style={[styles.content, {marginTop: 20}]}>
           <View style={styles.containerEventos}>
             <TouchableOpacity onPress={() => openGoogleMaps(-18.927672, -46.970893)}>
               <Image source={require('../../assets/img/celulaAdonai.png')} style={styles.images} />
               <View style={styles.textContainer}>
-                <Text style={styles.textOne}>CÉLULA ADONAI</Text>
-                <Text style={styles.textTwo}>Data: Todos os Sábados</Text>
-                <Text style={styles.textThree}>Horário: 15:30</Text>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULA ADONAI</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Todos os Sábados</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 15:30</Text>
               </View>
             </TouchableOpacity>
           </View>
         </View>
+
         <View style={styles.content}>
           <View style={styles.containerEventos}>
             <TouchableOpacity onPress={() => openGoogleMaps(-18.961282, -46.987652)}>
               <Image source={require('../../assets/img/celulaRevived.png')} style={styles.images} />
               <View style={styles.textContainer}>
-                <Text style={styles.textOne}>CÉLULA REVIVED</Text>
-                <Text style={styles.textTwo}>Data: Todos os Sábados</Text>
-                <Text style={styles.textThree}>Horário: 19:30</Text>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULA REVIVED</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Todos os Sábados</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 19:30</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#040316',
-    paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
+    padding: Platform.OS === 'android' ? statusBarHeight : 25,
   },
   content: {
     alignItems: 'center',
@@ -84,7 +89,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 70,
     backgroundColor: '#3E4A59',
-    paddingTop: 6,
+    paddingTop: 10,
     paddingLeft: 10,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,

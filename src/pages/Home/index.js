@@ -1,19 +1,19 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform, TouchableOpacity} from 'react-native';
-import Events from '../Events';
+import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, TouchableOpacity, useWindowDimensions} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home() {
   const navigation = useNavigation();
+  const windowWidth = useWindowDimensions().width;
+  const windowHeight = useWindowDimensions().height;
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-
         <View style={[styles.category, {marginTop: 20}]}>
-          <Text style={styles.textCategory}>Esta Semana</Text>
+          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Esta Semana</Text>
         </View>
 
         <View style={styles.content}>
@@ -21,16 +21,16 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
               <Image source={require('../../assets/img/imersao.png')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>IMERSÃO MARCADOS PELO ESPIRÍTO</Text>
-               <Text style={styles.textTwo}>Data: 16 e 17 de Março</Text>
-               <Text style={styles.textThree}>Valor: R$25,00</Text>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>IMERSÃO MARCADOS PELO ESPIRÍTO</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 e 17 de Março</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$25,00</Text>
               </View>
             </TouchableOpacity>
           </View>
         </View>
 
         <View style={styles.category}>
-          <Text style={styles.textCategory}>Eventos Final de Semana</Text>
+          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Eventos Final de Semana</Text>
         </View>
 
         <View style={styles.content}>
@@ -38,9 +38,9 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
               <Image source={require('../../assets/img/cultoIgreja.png')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>CULTO DA FAMÍLIA</Text>
-               <Text style={styles.textTwo}>Data: Aos Domingos</Text>
-               <Text style={styles.textThree}>Horário: 18:00</Text>
+               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO DA FAMÍLIA</Text>
+               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
+               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -51,9 +51,9 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
               <Image source={require('../../assets/img/RK/encontro-kids.png')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>CULTO RADICAIS KIDS</Text>
-               <Text style={styles.textTwo}>Data: Aos Domingos</Text>
-               <Text style={styles.textThree}>Horário: 18:00</Text>
+               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO RADICAIS KIDS</Text>
+               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
+               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -64,9 +64,9 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Celula')}>
               <Image source={require('../../assets/img/RL/Jesus.jpeg')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>CÉLULAS</Text>
-               <Text style={styles.textTwo}>Todas as Informações - Horários e Endereços</Text>
-               <Text style={styles.textThree}>Valor: Grátis</Text>
+               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULAS</Text>
+               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Todas as Informações - Horários e Endereços</Text>
+               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: Grátis</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -77,16 +77,16 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
               <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>REUNIÃO RADICAIS LIVRES</Text>
-               <Text style={styles.textTwo}>Data: 16 de Março</Text>
-               <Text style={styles.textThree}>Horário: 18:00</Text>
+               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>REUNIÃO RADICAIS LIVRES</Text>
+               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 de Março</Text>
+               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
               </View>
             </TouchableOpacity>
           </View>
         </View>
 
         <View style={styles.category}>
-          <Text style={styles.textCategory}>Próximo Mês</Text>
+          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Próximo Mês</Text>
         </View>
 
         <View style={[styles.content, {marginBottom: 100}]}>
@@ -94,9 +94,9 @@ export default function Home() {
             <TouchableOpacity onPress={() => navigation.navigate('Events')}>
               <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
               <View style={styles.textContainer}>
-               <Text style={styles.textOne}>ENCONTRO COM DEUS</Text>
-               <Text style={styles.textTwo}>Data: 26 à 28 de Abril</Text>
-               <Text style={styles.textThree}>Valor: R$50,00</Text>
+               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>ENCONTRO COM DEUS</Text>
+               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 26 à 28 de Abril</Text>
+               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$50,00</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     right: 0,
     height: 70,
     backgroundColor: '#3E4A59',
-    paddingTop: 6,
+    paddingTop: 10,
     paddingLeft: 10,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
