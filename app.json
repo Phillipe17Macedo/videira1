@@ -2,10 +2,10 @@
   "expo": {
     "name": "videira patrocionio",
     "slug": "videira1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "src/assets/icon-vide.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "src/assets/splash-vide.png",
       "resizeMode": "contain",
