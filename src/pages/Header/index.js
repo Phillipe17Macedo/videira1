@@ -12,12 +12,6 @@ export default function Header() {
         <View style={styles.logoVideiraHeader}>
           <Image style={styles.imgVideLogo} source={LogoVideira} />
         </View>
-
-        <View style={styles.iconPersonHeader}>
-          <TouchableOpacity onPress={() => console.log('Person Clicking Icon!')}>
-              <Ionicons name="person" size={32} color="#B8D9D3"/>
-          </TouchableOpacity>
-        </View>
       </View>
     </View>
   );
@@ -32,13 +26,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 60,
+    height: 55,
   },
   logoVideiraHeader:{
     backgroundColor: '#3E4A59',
     width: '100%',
-    height: 60,
-    alignItems: 'left',
+    height: 55,
+    alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 15,
   },
