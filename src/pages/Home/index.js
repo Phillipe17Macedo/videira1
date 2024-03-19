@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, TouchableOpacity, useWindowDimensions} from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, Platform, StatusBar, SafeAreaView, TouchableOpacity, useWindowDimensions} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const statusBarHeight = StatusBar.currentHeight;
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#040316',
+    paddingTop: Platform.OS === 'android' ? statusBarHeight : 25,
   },
   content:{
     alignItems: 'center',
