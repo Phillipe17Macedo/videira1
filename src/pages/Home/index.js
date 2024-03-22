@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <View style={[styles.category, {marginTop: 20}]}>
+        <View style={[styles.category]}>
           <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Esta Semana</Text>
         </View>
 

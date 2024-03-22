@@ -45,6 +45,33 @@ export default function Celula() {
           </View>
         </View>
 
+
+        <View style={[styles.content]}>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => openGoogleMaps(-18.927672, -46.970893)}>
+              <Image source={require('../../assets/img/celulaAdonai.png')} style={styles.images} />
+              <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULA ADONAI</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Todos os Sábados</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 15:30</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={[styles.content, {marginBottom: 80}]}>
+          <View style={styles.containerEventos}>
+            <TouchableOpacity onPress={() => openGoogleMaps(-18.961282, -46.987652)}>
+              <Image source={require('../../assets/img/celulaRevived.png')} style={styles.images} />
+              <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULA TETELESTAI</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Todas as Quartas-Feiras</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 19:30</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -54,14 +81,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#040316',
-    padding: Platform.OS === 'android' ? statusBarHeight : 25,
+    padding: Platform.OS === 'ios' ? statusBarHeight : 25,
   },
   content: {
     alignItems: 'center',
     alignSelf: 'center',
     justifyContent: 'center',
     flex: 1,
-    width: '85%',
+    width: '100%',
     height: 200,
     marginBottom: 20,
     backgroundColor: '#f1f1f1',
