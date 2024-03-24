@@ -12,95 +12,103 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <View style={[styles.category, {marginTop: 20}]}>
-          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Esta Semana</Text>
-        </View>
+        <View style={[styles.primaryCatergory]}>
 
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/imersao.png')} style={styles.images}/>
-              <View style={styles.textContainer}>
-                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>IMERSÃO MARCADOS PELO ESPIRÍTO</Text>
-                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 e 17 de Março</Text>
-                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$25,00</Text>
-              </View>
-            </TouchableOpacity>
+          <View style={[styles.category]}>
+            <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Esta Semana</Text>
+          </View>
+
+          <View style={styles.content}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+                <Image source={require('../../assets/img/imersao.png')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                  <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>IMERSÃO MARCADOS PELO ESPIRÍTO</Text>
+                  <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 e 17 de Março</Text>
+                  <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$25,00</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
 
-        <View style={styles.category}>
-          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Eventos Final de Semana</Text>
-        </View>
+        <View style={[styles.secondCategory]}>
+          <View style={styles.category}>
+            <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Eventos Final de Semana</Text>
+          </View>
 
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/cultoIgreja.png')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO DA FAMÍLIA</Text>
-               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
-               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
-              </View>
-            </TouchableOpacity>
+          <View style={styles.content}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+                <Image source={require('../../assets/img/cultoIgreja.png')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO DA FAMÍLIA</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={styles.content}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+                <Image source={require('../../assets/img/RK/encontro-kids.png')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO RADICAIS KIDS</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          <View style={styles.content}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Celula')}>
+                <Image source={require('../../assets/img/RL/Jesus.jpeg')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULAS</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Todas as Informações - Horários e Endereços</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: Grátis</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+          
+          <View style={styles.content}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+                <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>REUNIÃO RADICAIS LIVRES</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 de Março</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+        
+        <View style={[styles.threeCategory]}>
+          <View style={styles.category}>
+            <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Próximo Mês</Text>
+          </View>
+
+          <View style={[styles.content, {marginBottom: 100}]}>
+            <View style={styles.containerEventos}>
+              <TouchableOpacity onPress={() => navigation.navigate('Events')}>
+                <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
+                <View style={styles.textContainer}>
+                <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>ENCONTRO COM DEUS</Text>
+                <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 26 à 28 de Abril</Text>
+                <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$50,00</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
 
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/RK/encontro-kids.png')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CULTO RADICAIS KIDS</Text>
-               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: Aos Domingos</Text>
-               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Celula')}>
-              <Image source={require('../../assets/img/RL/Jesus.jpeg')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>CÉLULAS</Text>
-               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Todas as Informações - Horários e Endereços</Text>
-               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: Grátis</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.content}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/RL/rl-united.jpg')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>REUNIÃO RADICAIS LIVRES</Text>
-               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 16 de Março</Text>
-               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Horário: 18:00</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.category}>
-          <Text style={[styles.textCategory, {fontSize: windowWidth * 0.05}]}>Próximo Mês</Text>
-        </View>
-
-        <View style={[styles.content, {marginBottom: 100}]}>
-          <View style={styles.containerEventos}>
-            <TouchableOpacity onPress={() => navigation.navigate('Events')}>
-              <Image source={require('../../assets/img/encontro.png')} style={styles.images}/>
-              <View style={styles.textContainer}>
-               <Text style={[styles.textOne, {fontSize: windowWidth * 0.040}]}>ENCONTRO COM DEUS</Text>
-               <Text style={[styles.textTwo, {fontSize: windowWidth * 0.035}]}>Data: 26 à 28 de Abril</Text>
-               <Text style={[styles.textThree, {fontSize: windowWidth * 0.035}]}>Valor: R$50,00</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
