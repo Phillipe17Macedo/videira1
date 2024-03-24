@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Celula from './pages/Celula'
 import Events from './pages/Events'
 import More from './pages/More'
+import Profile from './pages/Profile'
 
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -18,7 +19,7 @@ function Routes(){
             screenOptions={{
                 tabBarActiveTintColor: '#B8D9D3',
                 tabBarInactiveTintColor: '#fff',
-                tabBarShowLabel: false,
+                tabBarShowLabel: true,
                 tabBarStyle:{
                     position: 'absolute',
                     backgroundColor: '#282A36',
@@ -30,6 +31,7 @@ function Routes(){
                     elevation: 0,
                     borderRadius: 15, 
                     height: 70,
+                    paddingBottom: 8,
                 }
             }}
         >
@@ -49,7 +51,7 @@ function Routes(){
             />
 
             <Tab.Screen
-                name="Celula"
+                name="Células"
                 component={Celula}
 
                 options={{
@@ -64,7 +66,7 @@ function Routes(){
             />
             
             <Tab.Screen
-                name="Events"
+                name="Eventos"
                 component={Events}
 
                 options={{
@@ -79,7 +81,7 @@ function Routes(){
 
             />
             <Tab.Screen
-                name="More"
+                name="Mais"
                 component={More}
 
                 options={{
@@ -88,7 +90,22 @@ function Routes(){
                         if(focused){
                             return <AntDesign name='appstore1' size={size} color={color}/>
                         }
-                        return <AntDesign name="appstore1" size={size} color={color} />;
+                        return <AntDesign name="appstore1" size={size} color={color}/>;
+                    }
+                }}
+            />
+
+            <Tab.Screen 
+                name="Perfil"
+                component={Profile}
+
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({color, size, focuded}) =>{
+                        if(focuded){
+                            return <Ionicons name='person' size={size} color={color}/>
+                        }
+                        return <Ionicons name='person' size={size} color={color}/>
                     }
                 }}
             />

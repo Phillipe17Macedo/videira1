@@ -9,11 +9,15 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <View style={styles.containerHeader}>
-        
         <View style={styles.logoVideiraHeader}>
           <Image style={styles.imgVideLogo} source={LogoVideira} />
         </View>
-      
+
+        <View style={styles.iconPersonHeader}> 
+          <TouchableOpacity onPress={() => console.log('Person Clicking Icon!')}>
+              <Ionicons name="person" size={32} color="#B8D9D3"/>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -34,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#3E4A59',
     width: '100%',
     height: 60,
-    alignItems: 'center',
+    alignItems: 'left',
     justifyContent: 'center',
     paddingHorizontal: 15,
   },
